@@ -52,12 +52,6 @@ body {
   margin-left: -2px;
 }
 
-.timeline-item {
-  padding: 20px 40px;
-  position: relative;
-  width: 50%;
-}
-
 .timeline-item.left {
   left: 0;
 }
