@@ -51,18 +51,5 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   <script src="https://unpkg.com/scrollama"></script>
-  <script>
-    $(document).ready(function() {
-      var scroller = scrollama();
-      scroller
-        .setup({
-          step: '.timeline-item',
-          offset: 0.6
-        })
-        .onStepEnter(function(response) {
-          response.element.classList.add('active');
-        });
-    });
-  </script>
 </body>
 </html>

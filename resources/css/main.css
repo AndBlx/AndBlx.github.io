@@ -52,20 +52,6 @@ body {
   margin-left: -2px;
 }
 
-.timeline-item {
-  padding: 20px 40px;
-  position: relative;
-  width: 50%;
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.6s ease-out;
-}
-
-.timeline-item.active {
-  opacity: 1;
-  transform: translateY(0);
-}
-
 .timeline-item.left {
   left: 0;
 }
