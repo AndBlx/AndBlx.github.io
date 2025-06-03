@@ -1,91 +1,108 @@
-/* style.css */
+/* main.css */
 
 /* Global Styles */
 body {
-    /* padding-top: 70px; */
-  }
-  
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
-  }
-  
-  .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/background.jpg') center/cover no-repeat;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: #fff;
-  }
-  
-  .hero-content {
-    max-width: 600px;
-  }
-  
-  .navbar-brand {
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
-  }
-  
-  .section {
-    padding: 80px 0;
-  }
-  
-  .card {
-    transition: transform 0.2s;
-    margin: 10px;
-  }
-  
-  .card:hover {
-    transform: translateY(-5px);
-  }
-  
-  footer {
-    padding: 20px 0;
-  }
-   
-  .hero h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
-  }
-  
-  .hero p {
-    font-size: 18px;
-    margin-bottom: 40px;
-  }
-  
-  .section h2 {
-    font-size: 36px;
-    margin-bottom: 40px;
-  }
-  
-  .card-body {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-top: none;
-    padding: 20px;
-    border-radius: 0 0 5px 5px;
-  }
-  
-  .btn-primary {
-    background-color: #17a2b8;
-    border-color: #17a2b8;
-  }
-  
-  .btn-primary:hover {
-    background-color: #138496;
-    border-color: #138496;
-  }
-  
-  footer {
-    background-color: #333;
-    color: #fff;
-  }
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
 
-  .progress-bar {
-    background-color: black;
-  }
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/background.jpg') center/cover no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+}
 
-  
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+}
+
+.footer {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Timeline Styles */
+.timeline-section {
+  padding: 60px 0;
+}
+
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  background-color: #17a2b8;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -2px;
+}
+
+.timeline-item {
+  padding: 20px 40px;
+  position: relative;
+  width: 50%;
+}
+
+.timeline-item.left {
+  left: 0;
+}
+
+.timeline-item.right {
+  left: 50%;
+}
+
+.timeline-item::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 20px;
+  right: -8px;
+  background-color: #fff;
+  border: 3px solid #17a2b8;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.timeline-item.right::after {
+  left: -8px;
+}
+
+.timeline-item .content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 768px) {
+  .timeline::after {
+    left: 31px;
+  }
+  .timeline-item {
+    width: 100%;
+    padding-left: 60px;
+    padding-right: 25px;
+  }
+  .timeline-item.right {
+    left: 0;
+  }
+  .timeline-item::after {
+    left: 15px;
+  }
+}
